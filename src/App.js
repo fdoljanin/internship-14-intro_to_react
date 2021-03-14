@@ -7,7 +7,7 @@ function App() {
   const [tasks, setTasks] = useState([]);
 
   return (
-    <div class="app">
+    <div className="app">
       <Form addTask={task => setTasks(prevState => [...prevState, task])} />
       <TaskList tasks={tasks}/>
     </div>

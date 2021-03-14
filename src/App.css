@@ -1,7 +1,11 @@
+.element-hidden {
+  display: none;
+}
+
 .app {
   display: flex;
   width: 60%;
-  min-width: 600px;
+  min-width: 900px;
   margin: auto;
 }
 
@@ -38,6 +42,28 @@ section, form {
   font-size: 16px;
 }
 
+.form-warning {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  animation: blinking 5s infinite;
+}
+
+@keyframes blinking {
+  0% {
+    background: #d83;
+  }
+  25% {
+    background: #d43
+  }
+  75% {
+    background: #d43;
+  }
+  100% {
+    background: #d83;
+  }
+}
+
 .task {
   display: flex;
   flex-direction: row;
@@ -51,6 +77,10 @@ section, form {
   justify-content: inherit;
   align-items: inherit;
   width: 90%;
+}
+
+.task-message {
+  text-align: center;
 }
 
 .task-priority {
@@ -70,4 +100,19 @@ section, form {
 .task-title--crossed {
   color: #aaa;
   text-decoration: line-through #aaa solid;
+}
+
+@media screen and (max-width: 1024px) {
+  .app {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: unset;
+    max-width: 550px;
+  }
+  .app > * {
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 0;
+  }
 }
