@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+.app {
+  display: flex;
+  width: 60%;
+  min-width: 600px;
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+section, form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 50%;
+  margin: 0 30px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.section-top {
+  background-color: #ba5c4d;
   color: white;
+  text-align: center;
+}
+.section-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+  padding: 10px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.section-content > * {
+  margin: 10px;
+  min-height: 28px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section-button {
+  background-color: #ba5c4d;
+  color: white;
+  border: 0;
+  font-size: 16px;
+}
+
+.task {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px #aaa solid;
+}
+
+.task-info {
+  display: flex;
+  justify-content: inherit;
+  align-items: inherit;
+  width: 90%;
+}
+
+.task-priority {
+  height: 28px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
+  background-color: #a6b89c;
+}
+
+.task-checkbox {
+  transform: scale(1.5);
+}
+
+.task-title--crossed {
+  color: #aaa;
+  text-decoration: line-through #aaa solid;
 }
