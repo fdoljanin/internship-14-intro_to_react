@@ -1,4 +1,13 @@
-.element-hidden {
+:root {
+  --main__red: #ba5c4d;
+  --main__grey: #f1f1f1;
+  --warning__red: #d43;
+  --warning__orange: #d83; 
+  --grayedOut: #aaa;
+  --lightGreen: #ab9;
+}
+
+.element--hidden {
   display: none;
 }
 
@@ -9,7 +18,7 @@
   margin: auto;
 }
 
-section, form {
+section {
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -19,14 +28,14 @@ section, form {
 }
 
 .section-top {
-  background-color: #ba5c4d;
+  background-color: var(--main__red);
   color: white;
   text-align: center;
 }
 .section-content {
   display: flex;
   flex-direction: column;
-  background-color: #f1f1f1;
+  background-color: var(--main__grey);
   padding: 10px 0;
 }
 
@@ -36,7 +45,7 @@ section, form {
 }
 
 .section-button {
-  background-color: #ba5c4d;
+  background-color: var(--main__red);
   color: white;
   border: 0;
   font-size: 16px;
@@ -51,16 +60,16 @@ section, form {
 
 @keyframes blinking {
   0% {
-    background: #d83;
+    background: var(--warning__orange);
   }
   25% {
-    background: #d43
+    background: var(--warning__red);
   }
   75% {
-    background: #d43;
+    background: var(--warning__red);
   }
   100% {
-    background: #d83;
+    background: var(--warning__orange);
   }
 }
 
@@ -69,7 +78,7 @@ section, form {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px #aaa solid;
+  border-bottom: 1px var(--grayedOut) solid;
 }
 
 .task-info {
@@ -90,7 +99,7 @@ section, form {
   align-items: center;
   color: white;
   border-radius: 5px;
-  background-color: #a6b89c;
+  background-color: var(--lightGreen);
 }
 
 .task-checkbox {
@@ -98,8 +107,8 @@ section, form {
 }
 
 .task-title--crossed {
-  color: #aaa;
-  text-decoration: line-through #aaa solid;
+  color: var(--grayedOut);
+  text-decoration: line-through var(--grayedOut) solid;
 }
 
 @media screen and (max-width: 1024px) {
